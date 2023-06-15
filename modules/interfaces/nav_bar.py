@@ -22,7 +22,7 @@ class ModernNavBar(UserControl):
                         content=Text(
                             value=initials,
                             size=20,
-                            font_family="Poppins",
+                            font_family="Nunito",
                             weight=FontWeight.W_800,
                             color="#507b63",
                         ),   
@@ -68,7 +68,7 @@ class ModernNavBar(UserControl):
                             color="#404331",
                             size=12,
                             text_align=TextAlign.CENTER, 
-                            font_family="Poppins"
+                            font_family="Nunito",
                         ),
                     ),
                     

@@ -13,8 +13,8 @@ class CardCount(UserControl):
 
     def CardDecoration(self, colors :list[str],title: str,value:str,image:str):
         return Container(
-            padding=10,
-            width=200,
+            
+            width=230,
             height=120,
             border_radius=10,
             alignment=alignment.center,
@@ -23,40 +23,51 @@ class CardCount(UserControl):
                 end=alignment.bottom_right,                
                 colors=colors,                              
             ), 
-            content=Row(
+            content=Stack(
                 expand=True,                
-               alignment= MainAxisAlignment.SPACE_BETWEEN,
+                #alignment= MainAxisAlignment.SPACE_BETWEEN,
                 #alignment=CrossAxisAlignment.CENTER,      
-                
-                controls=[
+                width=230,                
+                controls=[                    
                     
-                    Column(
-                        alignment=MainAxisAlignment.CENTER,
-                        
-                        controls=[
-                            Text(
+                    Container(                        
+                        content=Text(
                                 value=title,
                                 color='#FFFFFF',
                                 size=12,
-                                font_family="Poppins"
+                                font_family="Nunito",                                                                                            
                             ),
-                            Text(
+                            top=30,
+                            left=15,
+                        ),
+                    
+                    Container(                        
+                        content=Text(
                                 value=value,
                                 color='#FFFFFF',
-                                size=20,
-                                weight=FontWeight.W_800,
-                                font_family="Poppins"
+                                size=30,
+                                font_family="Nunito",                                                                                            
+                                weight=FontWeight.W_500,
                             ),
-                        ]
+                        top=45,
+                        left=15,
                     ),
-                    Image(
-                        width=50,
-                        height=120,
-                        fit=ImageFit.CONTAIN,
-                        repeat=ImageRepeat.NO_REPEAT,
-                        src=image,
+                    
+                                              
+                    Container(       
+                                                                       
+                        content=Image(
+                            width=100,
+                            height=120,
+                            fit=ImageFit.CONTAIN,
+                            repeat=ImageRepeat.NO_REPEAT,
+                            src=image,
+                            
+                        ),
+                        bottom=0,
+                        right=-10,
                         
-                    ),
+                    ),                             
                 ]
                 
             ),

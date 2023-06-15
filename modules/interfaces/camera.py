@@ -1,8 +1,9 @@
+
 import cv2
 import base64
-
 #Librerias UI
 import flet
+
 from flet import *
 
 camara=cv2.VideoCapture(0)
@@ -11,6 +12,7 @@ class VideoCamera(UserControl):
     
     def __init__(self):
         super().__init__()
+
     
     
     def did_mount(self):
@@ -35,8 +37,16 @@ class VideoCamera(UserControl):
         #camara.release()
         #cv2.destroyAllWindows()     
         #return frame
+        
+    def canvas_resize(self):
+        wd = Page.window_width
+        #print(f"Ancho: {int(e.width)}")
+        #print(f"Altura: {int(e.height)}")
+        pass
+        
     
     def build(self):
+        
         
         self.img = Image(
             width=600,
@@ -45,10 +55,14 @@ class VideoCamera(UserControl):
             fit=ImageFit.FIT_WIDTH,
         )
         
+        
+        
         return Container(            
                 
-                content=self.img,
                 
+                
+                content=self.img,
+             
             )
         
     

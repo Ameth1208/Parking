@@ -21,6 +21,7 @@ def main(page:Page):
     
     page.fonts = {
         "Poppins":"fonts/Poppins/Poppins-Medium.ttf",
+        "Nunito": "fonts/Nunito/Nunito-Medium.ttf"
     }
     
     #page.window_title_bar_hidden = True
@@ -77,6 +78,8 @@ if __name__ == '__main__':
         target=main,
         port=8484,
         view=WEB_BROWSER,
-        assets_dir="assets"
+        assets_dir="assets",
+        web_renderer="html",
+        
         
     )
