@@ -6,7 +6,6 @@ import qrcode
 from PIL import Image
 
 
-
 #Captura de Foto
 def capture_image(camara= cv2.VideoCapture(0)):
 
@@ -58,7 +57,5 @@ def _init_():
     
     
     
- 
 _init_()
-
-#capture_image()
+capture_image()

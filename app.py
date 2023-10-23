@@ -8,15 +8,10 @@ from flet import *
 #Modules
 from modules.interfaces.nav_bar import *
 from modules.interfaces.dashboard import *
-
-
-
-
         
         
 def main(page:Page):
     
-   
     #Remove title bar and buttons from windows frame
     
     page.fonts = {
@@ -53,25 +48,16 @@ def main(page:Page):
         padding=0,
         content=Row(            
             [
-            
               ModernNavBar(),  
-              Dashboard(),
-
-              
-            ],
-            
+              Dashboard(),              
+            ],            
             expand=True,
         ),
-        
-        
-    )
-    
+    ),   
     
     page.add(_main_container)
     page.update()
     
-
-
 
 if __name__ == '__main__':
     flet.app(
@@ -79,7 +65,5 @@ if __name__ == '__main__':
         port=8484,
         view=WEB_BROWSER,
         assets_dir="assets",
-        web_renderer="html",
-        
-        
+        web_renderer="html",        
     )

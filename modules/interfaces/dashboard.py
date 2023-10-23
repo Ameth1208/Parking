@@ -11,12 +11,10 @@ class Dashboard(UserControl):
     
     def __init__(self):
        super().__init__()
-       
-    
+           
     def build(self):
         #Dasboard
-        
-        
+                
         return Row(
             controls=[
                 

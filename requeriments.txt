@@ -1,5 +1,5 @@
-pip install opencv-python
-pip install pytesseract
-pip install keyboard
-pip install qrcode
-pip install flet
+opencv-python
+pytesseract
+keyboard
+qrcode
+flet
